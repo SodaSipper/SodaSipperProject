@@ -10,7 +10,8 @@ public class GameManager : Singleton<GameManager>
         int spm = 0;
         for (int i = 0; i < Upgrades.Count; i++)
         {
-            multiplier *= Upgrades[i].SipMultiplier;
+            if(Upgrades[i].SipMultiplier != 0)
+                multiplier *= Upgrades[i].SipMultiplier;
             spm += Upgrades[i].SipsPerMinute;
         }
         CounterSystem.Instance.multiplier = multiplier;

@@ -15,6 +15,6 @@ MonoBehaviour:
   Cost: 1000
   Name: Beast Beverage
   Description: x8 Money
-  Quote: 
+  Quote: Release the Beast. beverage.
   SipsPerMinute: 0
   SipMultiplier: 8

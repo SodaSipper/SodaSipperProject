@@ -17,11 +17,11 @@ public class CounterSystem : Singleton<CounterSystem>
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer >= 1)
+        if(sodaPerMinute != 0 && timer >= 60 / sodaPerMinute)
         {
-            timer -= 1;
-            counter += sodaPerMinute;
+            timer -= 60 / sodaPerMinute;
+            counter += 1;
         }
-        counterUI.text = "Sodas: " + counter;
+        counterUI.text = "Sodas Sipped: " + counter;
     }
 }

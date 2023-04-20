@@ -15,6 +15,6 @@ MonoBehaviour:
   Cost: 25000
   Name: Streamer Bath-Water
   Description: x32 Money
-  Quote: 
+  Quote: Bath-Water
   SipsPerMinute: 0
   SipMultiplier: 32

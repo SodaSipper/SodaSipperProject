@@ -15,6 +15,6 @@ MonoBehaviour:
   Cost: 99
   Name: Milk
   Description: x2 Money
-  Quote: 
+  Quote: Milk so good we canned it!
   SipsPerMinute: 0
   SipMultiplier: 2
