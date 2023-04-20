@@ -21,7 +21,6 @@ public class CounterSystem : MonoBehaviour
         counter += multiplier;
     }
 
-    
     // Update is called once per frame
     void Update()
     {
