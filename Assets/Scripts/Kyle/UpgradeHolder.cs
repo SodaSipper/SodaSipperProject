@@ -16,7 +16,11 @@ public class UpgradeHolder : MonoBehaviour
 
     public void AddEffect()
     {
-        GameManager.Instance.Upgrades.Add(upgrade);
-        GetComponent<Button>().interactable = false;
+        if(CounterSystem.Instance.counter >= upgrade.Cost)
+        {
+            GameManager.Instance.Upgrades.Add(upgrade);
+            GetComponent<Button>().interactable = false;
+            CounterSystem.Instance.counter -= upgrade.Cost;
+        }
     }
 }

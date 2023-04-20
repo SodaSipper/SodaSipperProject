@@ -1,29 +1,27 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
-public class CounterSystem : MonoBehaviour
+public class CounterSystem : Singleton<CounterSystem>
 {
-    int counter;
+    public int counter = 0;
     public TMP_Text counterUI;
-    int multiplier;
-    // Start is called before the first frame update
-    void Start()
-    {
-        counter = 0;
-        multiplier = 1;
-    }
+    public int multiplier = 1;
+    public int sodaPerMinute;
 
     public void Clicker(){
         counter += multiplier;
     }
 
+    float timer = 0;
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+        if(timer >= 1)
+        {
+            timer -= 1;
+            counter += sodaPerMinute;
+        }
         counterUI.text = "Sodas: " + counter;
     }
 }
